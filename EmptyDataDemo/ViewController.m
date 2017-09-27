@@ -35,6 +35,7 @@
 //    [self.webView loadHTMLString:@"测试" baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"点我试试" forState:UIControlStateNormal];
     button.tag = 0;
     button.frame = CGRectMake(0, 0, 100, 50);
     button.backgroundColor = [UIColor brownColor];
