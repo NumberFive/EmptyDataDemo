@@ -20,7 +20,7 @@ static char const * const kEmptyViewDic = "kEmptyViewDic";
 @implementation UIViewController (WXHEmptyDataSet)
 - (void)setEmptyView:(UIView *)view dataStatus:(NSString *)name
 {
-    if (view && name) {
+    if (view) {
         NSString *viewKey = [NSString stringWithFormat:@"%p",view];
         WXHEmptyDataSetView *emptyView = self.emptyViewDic[viewKey];
         
