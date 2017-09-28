@@ -85,14 +85,7 @@
         CGFloat height = [titleString heightForFont:self.titleLabel.font width:(self.frame.size.width - 2*self.emptyDataModel.padding)];
         height = height > 0 ? height+5 : height;
         make.height.equalTo(@(height));
-        
-        if (titleString.length) {
-            if (descriptString.length) {
-                make.centerY.equalTo(self);
-            } else {
-                make.centerY.equalTo(self).offset(height/3.0);
-            }
-        }
+        make.centerY.equalTo(self);
     }];
     [self.descriptLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(self.emptyDataModel.padding);
@@ -105,7 +98,7 @@
         if (titleString.length) {
             make.top.equalTo(self.titleLabel.mas_bottom).offset(self.emptyDataModel.titleDescriptSpace);
         } else {
-            make.centerY.equalTo(self).offset(height/3.0);
+            make.centerY.equalTo(self);
         }
     }];
 }
